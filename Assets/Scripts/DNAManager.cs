@@ -47,15 +47,15 @@ public class DNAManager : MonoBehaviour
 
         List<Challenger> newPopulation = new List<Challenger>();
 
-        for (int i = 0; i < amountOfChallengers; i++)
-        {
-            Challenger c = Instantiate(challengerPrefab, challengerPrefab.transform.position, Quaternion.identity);
-            c.dna = new DNA<Direction>(genesLength, random, GetRandomDirection, FitnessFunction, true);
-            c.transform.name = "Challenger " + i;
-            newPopulation.Add(c);
-        }
+        // for (int i = 0; i < amountOfChallengers; i++)
+        // {
+        //     Challenger c = Instantiate(challengerPrefab, challengerPrefab.transform.position, Quaternion.identity);
+        //     c.dna = new DNA<Direction>(genesLength, random, GetRandomDirection, FitnessFunction, true);
+        //     c.transform.name = "Challenger " + i;
+        //     newPopulation.Add(c);
+        // }
 
-        /* crossovers?? 
+        //crossovers 
         for (int i = 0; i < population.Count; i++)
         {
             DNA<Direction> parent1 = ChooseParent();
@@ -72,7 +72,8 @@ public class DNAManager : MonoBehaviour
                 c.dna = new DNA<Direction>(genesLength, random, GetRandomDirection, FitnessFunction, true);
             }
             newPopulation.Add(c);
-        }*/
+        }
+
         foreach (var item in population)
         {
             Destroy(item.gameObject);

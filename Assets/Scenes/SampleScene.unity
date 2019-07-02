@@ -379,7 +379,7 @@ MonoBehaviour:
   Generation: 0
   BestFitness: 0
   BestGenes: 
-  MutationRate: 0.01
+  MutationRate: 0.1
 --- !u!4 &2001502253
 Transform:
   m_ObjectHideFlags: 0
